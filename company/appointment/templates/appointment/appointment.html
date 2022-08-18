@@ -1,0 +1,14 @@
+
+{% extends 'appointment/basic.html' %}
+
+{% block title %}Запись к мастеру{% endblock %}
+
+{% block content %}
+    <h2>Список записей</h2>
+    <ul>
+        {% for appointment in appointments %}
+            <li>{{appointment.master}}, {{appointment.status}}</li>
+
+        {% endfor %}
+    </ul>
+{% endblock %}
